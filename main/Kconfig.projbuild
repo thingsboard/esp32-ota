@@ -1,0 +1,35 @@
+menu "ThingsBoard OTA configuration"
+
+config WIFI_SSID
+    string "WiFi SSID"
+	default "myssid"
+	help
+		SSID (network name) for the example to connect to.
+
+config WIFI_PASSWORD
+    string "WiFi Password"
+	default "mypassword"
+	help
+		WiFi password (WPA or WPA2) for the example to use.
+
+		Can be left blank if the network has no security set.
+
+config MQTT_BROKER_URL
+    string "MQTT broker URL"
+    default "mqtt://demo.thingsboard.io"
+    help
+        URL to connect to ThingsBoard.
+		
+config MQTT_BROKER_PORT
+    int "MQTT broker port"
+    default 1883
+    help
+        MQTT port to connect to ThingsBoard.
+
+config MQTT_ACCESS_TOKEN
+    string "MQTT access token"
+    default "esp32_access_token"
+    help
+        Access token to connect to ThingsBoard.
+
+endmenu
